@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 100px;
+    z-index: 2;
+
+    & img {
+        width: 250px;
+    }
+
+    & nav {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(3, 180px);
+            align-items: center;
+        }
+    }
+}
+
+section {
+    background-image: radial-gradient(#470964, #791fd3);
+    height: 100vh;
+    position: relative;
+
+    & .list-car {
+        position: relative;
+        width: 90vw;
+        height: 100%;
+        margin: auto;
+
+        & .cars {
+            position: absolute;
+            inset: 0;
+
+            & .img-car {
+                position: absolute;
+                top: 30%;
+                transform: translateY(-50%);
+                width: 70%;
+                rotate: -30deg;
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .content {
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                transform: translateY(-48%);
+                width: 40%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                & p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                & h1 {
+                    font-family: "League Gothic", sans-serif;
+                    font-size: 5rem;
+                    text-align: center;
+                }
+
+                & h2 {
+                    color: #b4b4b4;
+                    text-align: right;
+                    font-size: 16px;
+                    max-width: 400px;
+                    font-family: "League Gothic", sans-serif;
+                }
+
+                & button {
+                    width: 120px;
+                    height: 40px;
+                    background-color: chartreuse;
+                    border: none;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 3%;
+            width: 93%;
+            height: 200px;
+            border-top: 2px solid #fff;
+        }
+    }
+
+    & .butts {
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        display: flex;
+        justify-content: space-between;
+
+        & button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            & img {
+                width: 20px;
+                margin-top: 4px;
+            }
+            &:hover {
+                background-color: chartreuse;
+            }
+        }
+         & .buttonL {
+            rotate: 180deg;
+            ;
+        }     
+    }
+
+    & .indicators {
+        position: absolute;
+        bottom: 05%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        height: 200px;
+        width: 90vw;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: end;
+
+        & .numbers {
+            font-size: 5em;
+            font-family: "League Gothic", sans-serif;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+
+            & li {
+                width: 50px;
+                height: 5px;
+                border-radius: 5px;
+                background-color: chartreuse;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+             & .active {
+                background-color: #fff;
+            }
+        }    
+    }
+}
+
+section{
+
+    & .list-car{
+
+        & .cars{
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+
+            & .img-car{
+                transform: rotate(0deg);
+                transition: 0.5s;
+                transition-delay: 0.3s;
+            }
+            & .content{
+
+                & p, h1, h2, button{
+                    transform: translateX(200px);
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                    opacity: 0;
+                }
+                & h1{
+                    transition-delay: 0.5s;
+                }
+                & h2{
+                    transition-delay: 0.7s;
+                }
+                & button{
+                    transition-delay: 0.9s;
+                }
+            }
+        }
+
+        & .active{
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+        }
+        & .cars{
+            & .img-car{
+                rotate: -30deg;
+            }
+            & .content{
+
+                & p, h1, h2, button{
+                    transform: translateX(0);
+                    opacity: 1;
+                }   
+            }
+        }
+    }
+} 
