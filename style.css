@@ -42,7 +42,7 @@ section {
     height: 100vh;
     position: relative;
 
-    & .list-car {
+    & .list {
         position: relative;
         width: 90vw;
         height: 100%;
@@ -144,7 +144,7 @@ section {
                 background-color: chartreuse;
             }
         }
-         & .buttonL {
+         & #buttonL {
             rotate: 180deg;
             ;
         }     
@@ -188,7 +188,7 @@ section {
 
 section{
 
-    & .list-car{
+    & .list{
 
         & .cars{
             transform: translateX(100vw);
