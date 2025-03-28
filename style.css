@@ -38,7 +38,7 @@ header {
 }
 
 section {
-    background-image: radial-gradient(#470964, #791fd3);
+    background-image: radial-gradient(#340749, #5f1ba2);
     height: 100vh;
     position: relative;
 
@@ -67,33 +67,34 @@ section {
             & .content {
                 position: absolute;
                 top: 50%;
-                left: 60%;
+                left: 55%;
                 transform: translateY(-48%);
-                width: 40%;
-                height: 80%;
+                height: 60%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-end;
                 gap: 20px;
 
                 & p {
-                    font-size: 20px;
-                    text-align: center;
+                    font-size: 50px;
+                    font-weight: bold;
+                    text-transform: uppercase;
                 }
 
                 & h1 {
                     font-family: "League Gothic", sans-serif;
-                    font-size: 5rem;
-                    text-align: center;
+                    font-size: 7rem;
+                    max-width: 700px;
                 }
 
                 & h2 {
                     color: #b4b4b4;
-                    text-align: right;
                     font-size: 16px;
-                    max-width: 400px;
                     font-family: "League Gothic", sans-serif;
+                    max-width: 400px;
+                    line-height: 1.5;
+                    text-align: end;
                 }
 
                 & button {
@@ -156,7 +157,7 @@ section {
         left: 50%;
         transform: translateX(-50%);
         display: flex;
-        height: 200px;
+        height: 100px;
         width: 90vw;
         gap: 10px;
         flex-direction: column;
@@ -172,8 +173,8 @@ section {
             gap: 10px;
 
             & li {
-                width: 50px;
-                height: 5px;
+                width: 35px;
+                height: 6px;
                 border-radius: 5px;
                 background-color: chartreuse;
                 cursor: pointer;
@@ -181,6 +182,7 @@ section {
             }
              & .active {
                 background-color: #fff;
+                height: 4px;
             }
         }    
     }
