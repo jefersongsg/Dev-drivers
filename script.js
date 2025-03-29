@@ -9,26 +9,25 @@ let active = 0;
 let firstPosition = 0;
 let lastPosition = car.length - 1;
 
-next.onclick = () => {
+function slide() {
     let destiv = container.querySelector(".list .cars.active");
     destiv.classList.remove("active")
-    
-    active = active + 1 > lastPosition ? 0 : active + 1;
-    car[active].classList.add("active");
-    
+
     let destiv2 = indicator.querySelector("ul li.active");
     destiv2.classList.remove("active")
     dots[active].classList.add("active");
+
+    let formattedNumber = active < 9 ? "0" + (active + 1) : active + 1;
+    indicator.querySelector(".numbers").innerHTML = formattedNumber;
+}
+next.onclick = () => {   
+    active = active + 1 > lastPosition ? 0 : active + 1;
+    slide();
+    car[active].classList.add("active");
 };
 
-prev.onclick = () => {
-    let destiv = container.querySelector(".list .cars.active");
-    destiv.classList.remove("active")
-    
+prev.onclick = () => {  
     active = active - 1 < firstPosition ? lastPosition : active - 1;
+    slide();
     car[active].classList.add("active");
-    
-    let destiv2 = indicator.querySelector("ul li.active");
-    destiv2.classList.remove("active")
-    dots[active].classList.add("active");
 };
