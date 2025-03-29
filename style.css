@@ -17,7 +17,7 @@ header {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    width: 80vw;
+    width: 70vw;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 600px;
@@ -33,6 +33,7 @@ header {
             display: grid;
             grid-template-columns: repeat(3, 180px);
             align-items: center;
+            cursor: pointer;
         }
     }
 }
@@ -63,45 +64,39 @@ section {
                     transform: rotate(-30deg);
                 }
             }
-
             & .content {
                 position: absolute;
-                top: 50%;
-                left: 55%;
-                transform: translateY(-48%);
-                height: 60%;
+                right: 100px;
+                width: 70%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-end;
-                gap: 20px;
+                gap: 50px;
 
                 & p {
-                    font-size: 50px;
+                    color:  #beff1d;
+                    font-size: 30px;
                     font-weight: bold;
                     text-transform: uppercase;
                 }
-
                 & h1 {
                     font-family: "League Gothic", sans-serif;
-                    font-size: 7rem;
-                    max-width: 700px;
+                    font-size: 8em;
+                    line-height: 1em;
                 }
-
                 & h2 {
                     color: #b4b4b4;
-                    font-size: 16px;
+                    font-size: 12px;
                     font-family: "League Gothic", sans-serif;
-                    max-width: 400px;
-                    line-height: 1.5;
-                    text-align: end;
+                    max-width: 400px;   
                 }
-
                 & button {
                     width: 120px;
                     height: 40px;
-                    background-color: chartreuse;
-                    border: none;
+                    background-color: #beff1d;
+                    border: 2px solid #791fd3;
                     border-radius: 20px;
                     font-size: 14px;
                     cursor: pointer;
@@ -121,7 +116,6 @@ section {
             border-top: 2px solid #fff;
         }
     }
-
     & .butts {
         width: 95%;
         position: absolute;
@@ -145,12 +139,10 @@ section {
                 background-color: chartreuse;
             }
         }
-         & #buttonL {
+        & #buttonL {
             rotate: 180deg;
-            ;
         }     
     }
-
     & .indicators {
         position: absolute;
         bottom: 05%;
@@ -188,13 +180,12 @@ section {
     }
 }
 
-section{
-    & .list{
+& .container {
+    & .list {
         & .cars{
             transform: translateX(100vw);
             transition: 0.5s;
             opacity: 0;
-
             & .img-car{
                 & img{
                 transform: rotate(0);
@@ -202,9 +193,8 @@ section{
                 transition-delay: 0.3s;
                 }
             }
-        
             & .content {
-                & p, h1, h2, button{
+                & p, h1, h2, button {
                     transform: translateX(200px);
                     transition: 0.7s;
                     transition-delay: 0.3s;
@@ -220,17 +210,15 @@ section{
                     transition-delay: 0.9s;
                 }
             }
-        } 
+        }
         & .active{
             transform: translateX(0);
             transition: 0.5s;
             opacity: 1;
-        }
-        & .cars{
             & .img-car{
-              & img {transform: rotate(-30deg); } 
+              & img {transform: rotate(-30deg) } 
             }
-            & .content{
+            & .content {
 
                 & p, h1, h2, button{
                     transform: translateX(0);
