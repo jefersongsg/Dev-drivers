@@ -4,6 +4,7 @@ let container = document.querySelector(".container");
 let car = container.querySelectorAll(".list .cars");
 let indicator = document.querySelector(".indicators");
 let dots = indicator.querySelectorAll("ul li");
+let list = document.querySelector(".list");
 
 let active = 0;
 let firstPosition = 0;
@@ -20,13 +21,16 @@ function slide() {
     let formattedNumber = active < 9 ? "0" + (active + 1) : active + 1;
     indicator.querySelector(".numbers").innerHTML = formattedNumber;
 }
-next.onclick = () => {   
+next.onclick = () => {  
+    list.style.setProperty("--calculation",1)
     active = active + 1 > lastPosition ? 0 : active + 1;
     slide();
     car[active].classList.add("active");
+    --ca
 };
 
-prev.onclick = () => {  
+prev.onclick = () => { 
+    list.style.setProperty("--calculation",-1) 
     active = active - 1 < firstPosition ? lastPosition : active - 1;
     slide();
     car[active].classList.add("active");

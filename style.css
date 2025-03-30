@@ -14,6 +14,7 @@ body {
 }
 
 header {
+    top: 25px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -39,7 +40,7 @@ header {
 }
 
 section {
-    background-image: radial-gradient(#340749, #5f1ba2);
+    background-image: radial-gradient(#05122e, #0f2ba8);
     height: 100vh;
     position: relative;
 
@@ -57,11 +58,22 @@ section {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                width: 70%;
+                width: 60%;
 
                 & img {
                     width: 100%;
                     transform: rotate(-30deg);
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: #000;
+                    top: 120%;
+                    left: 8%;
+                    width: 95%;
+                    height: 100px;
+                    border-radius: 50%;
+                    filter: blur(50px);
                 }
             }
             & .content {
@@ -76,7 +88,7 @@ section {
                 gap: 50px;
 
                 & p {
-                    color:  #beff1d;
+                    color: #eeff00;
                     font-size: 30px;
                     font-weight: bold;
                     text-transform: uppercase;
@@ -95,8 +107,8 @@ section {
                 & button {
                     width: 120px;
                     height: 40px;
-                    background-color: #beff1d;
-                    border: 2px solid #791fd3;
+                    background-color: #eeff00;
+                    border: 2px solid #000;
                     border-radius: 20px;
                     font-size: 14px;
                     cursor: pointer;
@@ -136,7 +148,7 @@ section {
                 margin-top: 4px;
             }
             &:hover {
-                background-color: chartreuse;
+                background-color: #eeff00;
             }
         }
         & #buttonL {
@@ -168,7 +180,7 @@ section {
                 width: 35px;
                 height: 6px;
                 border-radius: 5px;
-                background-color: chartreuse;
+                background-color: #eeff00;
                 cursor: pointer;
                 transition: 0.5s;
             }
@@ -182,8 +194,9 @@ section {
 
 & .container {
     & .list {
+        --calculation: 1;
         & .cars{
-            transform: translateX(100vw);
+            transform: translateX(calc(100vw * var(--calculation)));
             transition: 0.5s;
             opacity: 0;
             & .img-car{
@@ -195,7 +208,7 @@ section {
             }
             & .content {
                 & p, h1, h2, button {
-                    transform: translateX(200px);
+                    transform: translateX(calc(200vw * var(--calculation)));
                     transition: 0.7s;
                     transition-delay: 0.3s;
                     opacity: 0;
