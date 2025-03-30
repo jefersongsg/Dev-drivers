@@ -26,7 +26,6 @@ next.onclick = () => {
     active = active + 1 > lastPosition ? 0 : active + 1;
     slide();
     car[active].classList.add("active");
-    --ca
 };
 
 prev.onclick = () => { 

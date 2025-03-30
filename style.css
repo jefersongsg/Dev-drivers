@@ -105,7 +105,7 @@ section {
                     max-width: 400px;   
                 }
                 & button {
-                    width: 120px;
+                    width: 100px;
                     height: 40px;
                     background-color: #eeff00;
                     border: 2px solid #000;
@@ -169,7 +169,10 @@ section {
 
         & .numbers {
             font-size: 5em;
-            font-family: "League Gothic", sans-serif;
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
         }
 
         ul {
