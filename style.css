@@ -22,7 +22,7 @@ header {
     width: 70vw;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 600px;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
     z-index: 2;
 
@@ -33,7 +33,7 @@ header {
     & nav {
         & ul {
             display: grid;
-            grid-template-columns: repeat(3, 180px);
+            grid-template-columns: repeat(3, 100px);
             align-items: center;
         }
     }
@@ -240,3 +240,121 @@ section {
         }
     }
 } 
+@media  (max-width: 600px) {
+    header{
+        left: 5%;
+        width: 0vw;
+        & img{
+            width: 90px;
+        }
+        & nav{
+            & ul{
+                grid-template-columns: repeat(3, 75px);
+                & li{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    section{
+        & .list {
+            & .cars {
+                & .img-car {
+                    width: 80%;
+                }
+                & .content {
+                right: 15px;
+                width: 60%;
+                gap: 10px;
+                & p {
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                }
+                & h1 {
+                    font-size: 3em;
+                    margin-bottom: 3em;
+                }
+                & h2 {
+                    font-size: 10px;
+                    max-width: 200px;
+                }
+                & button {
+                    width: 80px;
+                    height: 30px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }       
+        & .butts {
+            & button {
+                width: 30px;
+                height: 30px;
+                & img {
+                    width: 10px;
+                }
+            }
+        }
+        & .indicators {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            & .numbers {
+                font-size: 2em;
+            }
+            ul {
+                gap: 10px;
+                & li {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+@media  (min-width: 601px) and (max-width: 1100px) {
+    header{
+        left: 15%;
+        width: 0vw;
+        gap: 10px;
+    }
+    section{
+        & .list {
+            & .cars {
+                & .img-car {
+                    width: 70%;
+                }
+                & .content {
+                right: 60px;
+                width: 60%;
+                gap: 40px;
+                & p {
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                }
+                & h1 {
+                    font-size: 5em;
+                }
+                & h2 {
+                    font-size: 15px;
+                    max-width: 300px;
+                }
+                & button {
+                    width: 80px;
+                    height: 30px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+        & .butts {
+            & button {
+                width: 30px;
+                height: 30px;
+                & img {
+                    width: 10px;
+                }
+            }
+        }
+    }
+}
